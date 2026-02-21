@@ -38,11 +38,11 @@ function CheckVillain() {
 
     if (hiddenVillain === Guess) {
         caught++;
-        alert("You caught them")
+        alert("You caught them");
     }
-    else (hiddenVillain != Guess) {
+    else {
         gotAway++;
-        alert("Maybe next time")
+        alert("Maybe next time");
     }
 
     document.getElementById("result").innerHTML = "caught: " + caught + " / Got Away: " + gotAway;
