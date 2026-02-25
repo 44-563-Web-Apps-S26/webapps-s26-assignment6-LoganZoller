@@ -36,16 +36,16 @@
     <script>
 
         function doTax() {
-            let income = document.getElementById("income").value;
-            let baseRate = document.getElementById("baseRate").value;
-            let cutoff = document.getElementById("cutoff").value;
-            let extRate =document.getElementById("extRate").value;
+            let income = Number(document.getElementById("income").value);
+            let baseRate = Number(document.getElementById("baseRate").value);
+            let cutoff = Number(document.getElementById("cutoff").value);
+            let extRate = Number(document.getElementById("extRate").value);
 
             let taxTable = "";
             let incomeLevel = 0;
             let tax =  0;
 
-            for (i = 0; i < 5; i++) {
+            for (let i = 1; i <= 5; i++) {
                 incomeLevel = income * i;
 
                 if (incomeLevel < cutoff) {
@@ -55,10 +55,10 @@
                     tax = (cutoff * baseRate) + ((incomeLevel - cutoff) * extRate);
                 }
             
-                taxTable = incomeLevel + " tax is " + tax + " ;";
+                taxTable += incomeLevel + " tax is " + tax + " ;";
             }
             
-            doucment.getElementById("result").innerHTML = "Taxes are: " + taxTable;
+            document.getElementById("result").innerHTML = "Taxes are: " + taxTable;
 
         }
     </script>
