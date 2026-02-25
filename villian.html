@@ -51,6 +51,34 @@ function CheckVillain() {
 }
 </script>
 
+<div class="container">
+    <img src="https://www.wasconursery.com/wp-content/uploads/A188-19-1-300x300.jpg" id="tree" width="150" height="150" onclick="updatePic()" alt="Zelkova">
+</div>
+
+<script>
+    let usePic = 1;
+
+    function updatePic() {
+        let img = document.getElementById("tree");
+
+        switch (usePic) {
+            case 1: 
+                img.src = "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Shumard_Oak_1.jpg?v=1612444334";
+                usePic = 2;
+                break;
+
+            case 2:
+                img.src = "https://www.texaspecannursery.com/wp-content/uploads/2019/07/118066.jpg";
+                usePic = 3;
+                break;
+            
+            case 3:
+                img.src = "https://www.wasconursery.com/wp-content/uploads/A188-19-1-300x300.jpg";
+                usePic = 1;
+                break;
+        }
+    }
+</script>
 
 
 </body>
