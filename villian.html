@@ -15,7 +15,7 @@
 
 <form>
     <label for="Villain">Funny Man</label>
-    <input type ="password" id="Villain" value="Joker"><br>
+    <input type ="password" id="Villain" value="Joker"> <br>
 
     <label for="Guess">Guess the villain</label>
     <input type ="text" id="Guess"> <br>
@@ -52,13 +52,13 @@ function CheckVillain() {
 </script>
 
 <div class="container">
-    <img src="https://www.wasconursery.com/wp-content/uploads/A188-19-1-300x300.jpg" id="tree" width="150" height="150" onclick="changeTree()" alt="Zelkova">
+    <img src="https://www.wasconursery.com/wp-content/uploads/A188-19-1-300x300.jpg" id="tree" width="150" height="150" onclick="updatePic()" alt="Zelkova">
 </div>
 
 <script>
-    let usePicture = 1;
+    let usePic = 1;
 
-    function changeTree() {
+    function updatePic() {
         let img = document.getElementById("tree");
 
         switch (usePicutre) {
