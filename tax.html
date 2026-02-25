@@ -55,7 +55,7 @@
                     tax = (cutoff * baseRate) + ((incomeLevel - cutoff) * extRate);
                 }
             
-                taxTable += incomeLevel + " tax is " + tax + " ;";
+                taxTable += incomeLevel + " tax is " + tax + "; ";
             }
             
             document.getElementById("result").innerHTML = "Taxes are: " + taxTable;
