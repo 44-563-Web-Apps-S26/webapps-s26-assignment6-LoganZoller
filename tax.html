@@ -31,7 +31,7 @@
     </form>
 
 
-    <p id="result">Taxes are concatenated with taxTable</p>
+    <p id="taxResult">Taxes are concatenated with taxTable</p>
 
     <script>
 
@@ -58,10 +58,61 @@
                 taxTable += incomeLevel + " tax is " + tax + "; ";
             }
             
-            document.getElementById("result").innerHTML = "Taxes are: " + taxTable;
+            document.getElementById("taxResult").innerHTML = "Taxes are: " + taxTable;
 
         }
     </script>
+
+    <h2>Getting input with radio buttons and checkboxes</h2>
+
+    <form>
+        <input type="radio" id="power" name ="operation" value="exponent" onClick = "chooseOp()">
+        <label for="power">power</label></br>
+      
+        <input type="radio" id="add" name="operation" value="add" onClick = "chooseOp()">
+        <label for="add">sum</label></br>
+      
+        <input type="radio" id="mod" name="operation" value="mod" onClick = "chooseOp()">
+        <label for="mod">mod</label></br>
+
+      </form>
+      
+      
+
+    <p id="opResult">This text will be replaced </p>
+
+    <script> 
+    function chooseOp() {
+        let income = Number(document.getElementById("income").value);
+        let baseRate = Number(document.getElementById("baseRate").value);
+        
+        let radio = document.getElementsByName("operation");
+        let Text = "";
+
+        for (let i = 1; i <= 5; i++) {
+            if (radio[i].checked) {
+                if (radio[i].value === "exponent") {
+                    let Value = income ** baseRate;
+                    Text = income + " ^ " + baseRate + " is " + result;
+                }
+                else if (radio[i].value === "add") {
+                    let Value = income + baseRate;
+                    Text = income + " + " + baseRate + " is " + result;
+                }
+                else if (radio[i].value === "mod") {
+                    let Value = income % baseRate;
+                    Text = income + " % " + baseRate + " is " + result;
+                }
+            }
+        }
+
+    document.getElementById("opResult").innerHTML = resultText;
+}
+
+</script>
+
+</body>
+</html> 
 
 </body>
 
