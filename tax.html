@@ -89,24 +89,24 @@
         let radio = document.getElementsByName("operation");
         let Text = "";
 
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 0; i < radio.length; i++) {
             if (radio[i].checked) {
                 if (radio[i].value === "exponent") {
                     let Value = income ** baseRate;
-                    Text = income + " ^ " + baseRate + " is " + result;
+                    Text = income + " ^ " + baseRate + " is " + Value;
                 }
                 else if (radio[i].value === "add") {
                     let Value = income + baseRate;
-                    Text = income + " + " + baseRate + " is " + result;
+                    Text = income + " + " + baseRate + " is " + Value;
                 }
                 else if (radio[i].value === "mod") {
                     let Value = income % baseRate;
-                    Text = income + " % " + baseRate + " is " + result;
+                    Text = income + " % " + baseRate + " is " + Value;
                 }
             }
         }
 
-    document.getElementById("opResult").innerHTML = resultText;
+    document.getElementById("opResult").innerHTML = Text;
 }
 
 </script>
