@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+
+<head>
+    <title>
+        Travel Planner
+    </title>
+    <h1>
+        Logan Zoller travel planner
+    </h1>
+</head>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="Caribbean">Caribbean</label>
+    <input type ="checkbox" id="Caribbean" value="True"> <br>
+
+    <label for="Mediterranean">Mediterranean</label>
+    <input type ="checkbox" id="Mediterranean"  value="True" autofocus> <br>
+
+    <label for="Baltic">Baltic</label>
+    <input type ="checkbox" id="Baltic" value="False" autofocus> <br>
+
+    <input type="button" onclick="choices()" value="Cruise Choices">
+</form>
+
+
+<p id="result">Results</p>
+
+<script>
+
+let my_trip = {};
+
+function choices() {
+    my_trip = {};
+
+    my_trip.cari = document.getElementById("Caribbean").checked;
+    my_trip.medi = document.getElementById("Mediterranean").checked;
+    my_trip.balt = document.getElementbyId("Baltic").checked;
+
+    document.getElementById("result").innerHTML = JSON.stringify(my_trip);
+}
+</script>
+
+</body>
+</html> 
