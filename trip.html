@@ -45,5 +45,31 @@ function choices() {
 }
 </script>
 
+<form>
+    <label for="startingCity">Enter starting city</label>
+    <input type ="text" id="startingCity" value="Athens"> <br>
+
+    <label for="endingCit">Enter ending city</label>
+    <input type ="text" id="endingCity"> <br>
+
+    <input type="button" onclick="updateTrip()" value="Update the trip">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function updateTrip(){
+    let startingCity = document.getElementById("startingCity").value;
+    let endingCity = document.getElementById("endingCity").value;
+    
+    my_trip["startCity"] = startingCity;
+    my_trip["endCity"] = endingCity;
+    
+    document.getElementById("result").innerHTML = JSON.stringify(my_trip);
+}
+</script>
+
 </body>
 </html> 
