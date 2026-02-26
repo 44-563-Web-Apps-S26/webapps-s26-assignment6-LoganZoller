@@ -19,10 +19,10 @@
     <input type ="checkbox" id="Caribbean" value="True"> <br>
 
     <label for="Mediterranean">Mediterranean</label>
-    <input type ="checkbox" id="Mediterranean"  value="True" autofocus> <br>
+    <input type ="checkbox" id="Mediterranean"  value="True"> <br>
 
     <label for="Baltic">Baltic</label>
-    <input type ="checkbox" id="Baltic" value="False" autofocus> <br>
+    <input type ="checkbox" id="Baltic" value="False"> <br>
 
     <input type="button" onclick="choices()" value="Cruise Choices">
 </form>
@@ -39,7 +39,7 @@ function choices() {
 
     my_trip.cari = document.getElementById("Caribbean").checked;
     my_trip.medi = document.getElementById("Mediterranean").checked;
-    my_trip.balt = document.getElementbyId("Baltic").checked;
+    my_trip.balt = document.getElementById("Baltic").checked;
 
     document.getElementById("result").innerHTML = JSON.stringify(my_trip);
 }
